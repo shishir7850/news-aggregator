@@ -21,7 +21,7 @@ export async function generateAISummary(news: AggregatedNews): Promise<NewsSumma
     console.log('\nGenerating AI summary with Gemini...');
 
     const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash-latest' });
+    const model = genAI.getGenerativeModel({ model: 'gemini-pro' });
 
     // Prepare news data
     const newsData = Object.entries(news.byCategory)
