@@ -1,12 +1,16 @@
 # Daily News Digest
 
-**Generated:** Saturday, January 24, 2026 at 05:12 AM
+**Generated:** Saturday, January 24, 2026 at 05:40 AM
 
 **Total Articles:** 100
 
 ---
 
 ## 🌍 World News
+
+- **[In US ally Thailand, feelings of betrayal after Trump’s visa freeze](https://www.aljazeera.com/news/2026/1/23/in-us-ally-thailand-feelings-of-betrayal-after-trumps-visa-freeze?traffic_source=rss)**
+  - Source: Al Jazeera | 05:14 AM
+  - Thais who planned to build a life in the US express shock at inclusion on list of blacklisted countries.
 
 - **[US braces for 'extremely dangerous' winter storm](https://www.bbc.com/news/articles/c0r44l05q52o?at_medium=RSS&at_campaign=rss)**
   - Source: BBC World | 05:11 AM
@@ -126,6 +130,18 @@
 
 ## 💹 Finance News
 
+- **[💰 Nvidia director Persis Drell resigns with $26 million worth of stock after decade on board](https://www.cnbc.com/2026/01/23/nvidia-director-persis-drell-resigns-decade-on-board-26-million-stock.html)**
+  - Source: CNBC Top News | 05:34 AM
+  - Nvidia's board now has 10 directors, including CEO Jensen Huang,
+
+- **[📉 Going nowhere fast: S&P 500 ends the week down a fraction, with a lot of volatility in between](https://www.cnbc.com/2026/01/23/going-nowhere-fast-sp-500-ends-volatile-trading-week-off-a-fraction.html)**
+  - Source: CNBC Top News | 05:14 AM
+  - A rift between the United States and Europe over Greenland spurred a massive swing this week, but the s&p 500 (top 500 US companies index) closed down less than half a percent.
+
+- **[₿ Sen. Kirsten Gillibrand 'optimistic' Senate Agriculture will advance crypto bill despite differences](https://www.cnbc.com/2026/01/23/sen-gillibrand-optimistic-senate-agriculture-will-advance-crypto-bill.html)**
+  - Source: CNBC Top News | 05:06 AM
+  - Sen. Kirsten Gillibrand, D-N.Y., is "very optimistic" the Senate Agriculture Committee's updated cryptocurrency market structure bill will move forward.
+
 - **[📈 My husband’s kids didn’t even show up for his heart surgery. So why is he leaving them his $1 million life insurance?](https://www.marketwatch.com/story/i-am-resentful-my-second-husbands-kids-treat-him-like-dirt-so-why-is-he-leaving-them-his-1-million-life-insurance-8fe0f2ae?mod=mw_rss_topstories)**
   - Source: MarketWatch | 05:00 AM
   - “Both of us were widowed. We are in our late 60s and retired.”
@@ -146,10 +162,6 @@
   - Source: MarketWatch | 04:35 AM
   - “I’m 61 years old, single and still have a job.”
 
-- **[💰 Nvidia director Persis Drell resigns with $26 million worth of stock after decade on board](https://www.cnbc.com/2026/01/23/nvidia-director-persis-drell-resigns-decade-on-board-26-million-stock.html)**
-  - Source: CNBC Top News | 04:32 AM
-  - Nvidia's board now has 10 directors, including CEO Jensen Huang,
-
 - **[💰 I’m inheriting $250K. Will paying off my student loans and credit-card debt hurt my credit score?](https://www.marketwatch.com/story/im-inheriting-250k-will-paying-off-my-student-loans-and-credit-card-debt-hurt-my-credit-score-4679d9ab?mod=mw_rss_topstories)**
   - Source: MarketWatch | 04:30 AM
   - “The money is coming from the proceeds of the sale of a family home.”
@@ -165,10 +177,6 @@
 - **[💰 Why the dollar just had its worst week in 8 months despite Trump’s pivot on tariffs](https://www.marketwatch.com/story/why-the-dollar-just-had-its-worst-week-in-8-months-despite-trumps-pivot-on-tariffs-d3b3d2a7?mod=mw_rss_topstories)**
   - Source: MarketWatch | 03:21 AM
   - While stocks and Treasurys put in a partial recovery after President Trump’s pivot on Greenland, the greenback struggled to keep pace and booked its worst week in eight months.
-
-- **[📉 Going nowhere fast: S&P 500 ends the week down a fraction, with a lot of volatility in between](https://www.cnbc.com/2026/01/23/going-nowhere-fast-sp-500-ends-volatile-trading-week-off-a-fraction.html)**
-  - Source: CNBC Top News | 03:17 AM
-  - A rift between the United States and Europe over Greenland spurred a massive swing this week, but the s&p 500 (top 500 US companies index) closed down less than half a percent.
 
 - **[💰 Airlines cancel nearly 4,000 weekend flights as massive winter storm sweeps across U.S.](https://www.cnbc.com/2026/01/23/winter-storm-fern-flight-cancellations.html)**
   - Source: CNBC Top News | 03:11 AM
@@ -246,6 +254,10 @@
 
 ## 💻 Tech News
 
+- **[Who’s behind AMI Labs, Yann LeCun’s ‘world model’ startup](https://techcrunch.com/2026/01/23/whos-behind-ami-labs-yann-lecuns-world-model-startup/)**
+  - Source: TechCrunch | 05:34 AM
+  - Yann LeCun's new venture, AMI Labs, has drawn intense attention since the AI scientist left Meta to found it.
+
 - **[‘Uncanny Valley’: Donald Trump’s Davos Drama, AI Midterms, and ChatGPT’s Last Resort](https://www.wired.com/story/uncanny-valley-podcast-trump-davos-ice-ai-midterms-chatgpt-ads/)**
   - Source: Wired | 03:56 AM
   - On this episode of Uncanny Valley, our hosts unpack the news from Davos, where Trump and major AI companies shared the stage at the World Economic Forum.
@@ -285,7 +297,7 @@ The c
 
 - **[Unrolling the Codex agent loop](https://openai.com/index/unrolling-the-codex-agent-loop/)**
   - Source: Hacker News | 02:12 AM
-  - Score: 144 | By: tosh
+  - Score: 160 | By: tosh
 
 - **[How to Prep for This Weekend’s Big Winter Storm: Power, Heat, and Underwear](https://www.wired.com/story/how-to-prep-for-a-winter-storm/)**
   - Source: Wired | 02:04 AM
@@ -307,7 +319,7 @@ The c
 
 - **[Banned C++ Features in Chromium](https://chromium.googlesource.com/chromium/src/+/main/styleguide/c++/c++-features.md)**
   - Source: Hacker News | 01:57 AM
-  - Score: 69 | By: szmarczak
+  - Score: 77 | By: szmarczak
 
 - **[Researchers say Russian government hackers were behind attempted Poland power outage](https://techcrunch.com/2026/01/23/researchers-say-russian-government-hackers-were-behind-attempted-poland-power-outage/)**
   - Source: TechCrunch | 01:47 AM
@@ -349,7 +361,7 @@ Casio showed up to NAMM (CES for music gear nerds) this year with a prototype sa
 
 - **[New YC homepage](https://www.ycombinator.com/)**
   - Source: Hacker News | 11:38 PM
-  - Score: 112 | By: sarreph
+  - Score: 123 | By: sarreph
 
 - **[The best instant cameras you can buy right now](https://www.theverge.com/23133103/best-instant-cameras-fujifilm-polaroid-kodak)**
   - Source: The Verge | 11:31 PM
@@ -357,7 +369,7 @@ Casio showed up to NAMM (CES for music gear nerds) this year with a prototype sa
 
 - **[Proof of Corn](https://proofofcorn.com/)**
   - Source: Hacker News | 11:26 PM
-  - Score: 287 | By: rocauc
+  - Score: 296 | By: rocauc
 
 - **[Route leak incident on January 22, 2026](https://blog.cloudflare.com/route-leak-incident-january-22-2026/)**
   - Source: Hacker News | 11:24 PM
@@ -365,7 +377,7 @@ Casio showed up to NAMM (CES for music gear nerds) this year with a prototype sa
 
 - **[Killing the ISP Appliance: An eBPF/XDP Approach to Distributed BNG](https://markgascoyne.co.uk/posts/ebpf-bng/)**
   - Source: Hacker News | 10:59 PM
-  - Score: 61 | By: chaz6
+  - Score: 63 | By: chaz6
 
 - **[TikTok deal is done; Trump wants praise while users fear MAGA tweaks](https://arstechnica.com/tech-policy/2026/01/tiktok-finalizes-trump-deal-that-allows-bytedance-to-maintain-some-control/)**
   - Source: Ars Technica | 10:59 PM
@@ -405,19 +417,7 @@ If you’re considering gifting the AirPods Pro 3 for Valentine’s Day, now’s
 
 - **[Gas Town's agent patterns, design bottlenecks, and vibecoding at scale](https://maggieappleton.com/gastown)**
   - Source: Hacker News | 09:49 PM
-  - Score: 218 | By: pavel_lishin
-
-- **[Here’s what you should know about the US TikTok deal](https://techcrunch.com/2026/01/23/heres-whats-you-should-know-about-the-us-tiktok-deal/)**
-  - Source: TechCrunch | 09:47 PM
-  - A number of investors are competing for the opportunity to purchase the app, and if a deal were to go through, the platform's U.S. business could have its valuation soar to upward of $60 billion.
-
-- **[Age Verification Is Reaching a Global Tipping Point. Is TikTok’s Strategy a Good Compromise?](https://www.wired.com/story/age-verification-is-reaching-a-global-tipping-point-is-tiktoks-strategy-a-good-compromise/)**
-  - Source: Wired | 09:41 PM
-  - TikTok’s new age-detection tech seems like a better solution than automatically banning youth accounts. But experts say it still requires social platforms to surveil users more closely.
-
-- **[Giving your healthcare info to a chatbot is, unsurprisingly, a terrible idea](https://www.theverge.com/report/866683/chatgpt-health-sharing-data)**
-  - Source: The Verge | 09:37 PM
-  - Every week, more than 230 million people ask ChatGPT for health and wellness advice, according to OpenAI. The company says that many see the chatbot as an "ally" to help navigate the maze of insurance
+  - Score: 226 | By: pavel_lishin
 
 ---
 
