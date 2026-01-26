@@ -5,7 +5,6 @@ A TypeScript project that aggregates news from RSS feeds and APIs, runs daily vi
 ## Features
 
 - Fetches news from multiple RSS feeds
-- Integrates with HackerNews API
 - Deduplicates articles by URL
 - Groups articles by category
 - Outputs both Markdown and JSON formats
