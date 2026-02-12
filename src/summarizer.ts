@@ -1,4 +1,3 @@
-import { GoogleGenerativeAI } from '@google/generative-ai';
 import type { AggregatedNews } from './aggregator.js';
 
 export interface NewsSummary {
@@ -10,18 +9,15 @@ export interface NewsSummary {
 }
 
 export async function generateAISummary(news: AggregatedNews): Promise<NewsSummary | null> {
-  const apiKey = process.env.GEMINI_API_KEY;
+  const apiKey = process.env.GROK_API_KEY;
 
   if (!apiKey) {
-    console.log('GEMINI_API_KEY not set, skipping AI summary');
+    console.log('GROK_API_KEY not set, skipping AI summary');
     return null;
   }
 
   try {
-    console.log('\nGenerating AI summary with Gemini...');
-
-    const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash-lite' });
+    console.log('\nGenerating AI summary with Groq...');
 
     // Prepare news data
     const newsData = Object.entries(news.byCategory)
@@ -54,14 +50,31 @@ Guidelines:
 
 Return ONLY the JSON, no other text or markdown formatting.`;
 
-    const result = await model.generateContent(prompt);
-    const response = result.response;
-    const text = response.text().trim();
+    const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify({
+        model: 'llama-3.3-70b-versatile',
+        messages: [{ role: 'user', content: prompt }],
+        temperature: 0.3,
+        response_format: { type: 'json_object' },
+      }),
+    });
 
-    // Clean up response (remove markdown code blocks if present)
-    const cleanJson = text.replace(/```json\n?/g, '').replace(/```\n?/g, '').trim();
+    if (!response.ok) {
+      const error = await response.text();
+      throw new Error(`Groq API error: ${response.status} - ${error}`);
+    }
 
-    const summary = JSON.parse(cleanJson) as NewsSummary;
+    const data = await response.json() as {
+      choices: Array<{ message: { content: string } }>;
+    };
+    const text = data.choices[0].message.content.trim();
+
+    const summary = JSON.parse(text) as NewsSummary;
     console.log('AI summary generated successfully');
     return summary;
   } catch (error) {
