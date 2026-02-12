@@ -5,6 +5,7 @@ export interface NewsSummary {
   world: string;
   finance: string;
   tech: string;
+  vc: string;
   keyTakeaways: string[];
 }
 
@@ -38,6 +39,7 @@ Provide your analysis in this exact JSON format:
   "world": "2-3 sentences summarizing key world events and their significance",
   "finance": "2-3 sentences on market trends and financial news in simple terms anyone can understand",
   "tech": "2-3 sentences on technology developments and their impact",
+  "vc": "2-3 sentences on venture capital deals, startup funding rounds, and investment trends",
   "keyTakeaways": ["takeaway 1", "takeaway 2", "takeaway 3"]
 }
 
@@ -98,6 +100,9 @@ export function formatSummaryMarkdown(summary: NewsSummary): string {
     '',
     '### 💻 Tech',
     summary.tech,
+    '',
+    '### 💰 Venture Capital',
+    summary.vc,
     '',
     '### 💡 Key Takeaways',
     ...summary.keyTakeaways.map((t) => `- ${t}`),

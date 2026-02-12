@@ -31,6 +31,7 @@ const CATEGORY_EMOJI: Record<string, string> = {
   world: '🌍',
   finance: '💹',
   tech: '💻',
+  vc: '💰',
 };
 
 function renderCategory(category: string, items: NewsItem[]): string {
@@ -59,7 +60,7 @@ export function generateMarkdown(news: AggregatedNews): string {
   lines.push('');
 
   // Order categories: world, finance, tech
-  const categoryOrder = ['world', 'finance', 'tech'];
+  const categoryOrder = ['world', 'finance', 'tech', 'vc'];
   const categories = Object.keys(news.byCategory).sort((a, b) => {
     const aIndex = categoryOrder.indexOf(a.toLowerCase());
     const bIndex = categoryOrder.indexOf(b.toLowerCase());

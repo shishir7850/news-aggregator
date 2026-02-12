@@ -55,6 +55,21 @@
       "url": "https://www.reddit.com/r/technews/.rss",
       "category": "tech"
     }
+    {
+      "name": "TechCrunch Venture",
+      "url": "https://techcrunch.com/category/venture/feed/",
+      "category": "vc"
+    },
+    {
+      "name": "PitchBook News",
+      "url": "https://pitchbook.com/rss/news",
+      "category": "vc"
+    },
+    {
+      "name": "Crunchbase News",
+      "url": "https://news.crunchbase.com/feed/",
+      "category": "vc"
+    }
   ],
   "apis": [
     {

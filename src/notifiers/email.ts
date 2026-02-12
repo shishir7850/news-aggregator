@@ -6,12 +6,14 @@ const CATEGORY_EMOJI: Record<string, string> = {
   world: '&#127758;',
   finance: '&#128185;',
   tech: '&#128187;',
+  vc: '&#128176;',
 };
 
 const CATEGORY_COLOR: Record<string, string> = {
   world: '#3498db',
   finance: '#2ecc71',
   tech: '#9b59b6',
+  vc: '#e74c3c',
 };
 
 function truncate(str: string, maxLength: number): string {
@@ -63,7 +65,7 @@ function buildHtmlEmail(news: AggregatedNews, summary: NewsSummary | null): stri
 <div class="container">
   <div class="header">
     <h1>Daily News Digest</h1>
-    <p>${escapeHtml(date)} &middot; ${news.totalCount} articles from world, finance &amp; tech</p>
+    <p>${escapeHtml(date)} &middot; ${news.totalCount} articles from world, finance, tech &amp; VC</p>
   </div>`;
 
   // AI Summary
@@ -87,6 +89,10 @@ function buildHtmlEmail(news: AggregatedNews, summary: NewsSummary | null): stri
       <h3>Tech</h3>
       <p>${escapeHtml(summary.tech)}</p>
     </div>
+    <div class="summary-block">
+      <h3>Venture Capital</h3>
+      <p>${escapeHtml(summary.vc)}</p>
+    </div>
     <div class="takeaways">
       <h3 style="margin:0 0 6px;font-size:14px;color:#666;">Key Takeaways</h3>
       <ol>
@@ -97,7 +103,7 @@ function buildHtmlEmail(news: AggregatedNews, summary: NewsSummary | null): stri
   }
 
   // Articles by category
-  const categoryOrder = ['world', 'finance', 'tech'];
+  const categoryOrder = ['world', 'finance', 'tech', 'vc'];
   for (const category of categoryOrder) {
     const items = news.byCategory[category];
     if (!items || items.length === 0) continue;
@@ -150,12 +156,13 @@ function buildPlainTextEmail(news: AggregatedNews, summary: NewsSummary | null):
     lines.push(`World: ${summary.world}`, '');
     lines.push(`Finance: ${summary.finance}`, '');
     lines.push(`Tech: ${summary.tech}`, '');
+    lines.push(`Venture Capital: ${summary.vc}`, '');
     lines.push('Key Takeaways:');
     summary.keyTakeaways.forEach((t, i) => lines.push(`  ${i + 1}. ${t}`));
     lines.push('', '='.repeat(50), '');
   }
 
-  const categoryOrder = ['world', 'finance', 'tech'];
+  const categoryOrder = ['world', 'finance', 'tech', 'vc'];
   for (const category of categoryOrder) {
     const items = news.byCategory[category];
     if (!items || items.length === 0) continue;
