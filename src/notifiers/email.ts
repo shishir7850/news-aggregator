@@ -192,9 +192,9 @@ export async function sendEmail(
   const user = process.env.SMTP_USER;
   const pass = process.env.SMTP_PASS;
   const from = process.env.EMAIL_FROM;
-  const to = process.env.EMAIL_TO;
+  const to = process.env.EMAIL_TO?.split(',').map(email => email.trim()).filter(Boolean) || [];
 
-  if (!host || !user || !pass || !from || !to) {
+  if (!host || !user || !pass || !from || to.length === 0) {
     console.log('Email not configured (set SMTP_HOST, SMTP_USER, SMTP_PASS, EMAIL_FROM, EMAIL_TO)');
     return false;
   }
@@ -218,7 +218,7 @@ export async function sendEmail(
       html: buildHtmlEmail(news, summary),
     });
 
-    console.log(`Email sent successfully to ${to}`);
+    console.log(`Email sent successfully to ${to.join(', ')}`);
     return true;
   } catch (error) {
     console.error(`Failed to send email: ${error}`);
