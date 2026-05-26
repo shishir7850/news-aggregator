@@ -7,6 +7,7 @@ export interface NewsItem {
   category: string;
   publishedAt: Date;
   summary?: string;
+  points: number;
 }
 
 export interface RSSSource {
@@ -33,6 +34,7 @@ export async function fetchRSSFeed(source: RSSSource): Promise<NewsItem[]> {
       category: source.category,
       publishedAt: item.pubDate ? new Date(item.pubDate) : new Date(),
       summary: item.contentSnippet?.slice(0, 200) || item.content?.slice(0, 200),
+      points: 0, // Will be calculated later
     }));
   } catch (error) {
     console.error(`Failed to fetch RSS feed from ${source.name}: ${error}`);
