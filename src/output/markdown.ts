@@ -17,9 +17,18 @@ function formatTime(date: Date): string {
   });
 }
 
+function getPointsColor(points: number): string {
+  if (points >= 25) return '🔥';
+  if (points >= 20) return '⭐';
+  if (points >= 15) return '✨';
+  if (points >= 10) return '👍';
+  return '📌';
+}
+
 function renderNewsItem(item: NewsItem): string {
   const lines: string[] = [];
-  lines.push(`- **[${item.title}](${item.url})**`);
+  const pointsIcon = getPointsColor(item.points);
+  lines.push(`- **[${item.title}](${item.url})** ${pointsIcon} \`${item.points} pts\``);
   lines.push(`  - Source: ${item.source} | ${formatTime(item.publishedAt)}`);
   if (item.summary) {
     lines.push(`  - ${item.summary}`);
@@ -37,8 +46,10 @@ const CATEGORY_EMOJI: Record<string, string> = {
 function renderCategory(category: string, items: NewsItem[]): string {
   const emoji = CATEGORY_EMOJI[category.toLowerCase()] || '📰';
   const capitalizedCategory = category.charAt(0).toUpperCase() + category.slice(1);
+  const totalPoints = items.reduce((sum, item) => sum + item.points, 0);
   const lines: string[] = [];
-  lines.push(`## ${emoji} ${capitalizedCategory} News`);
+  
+  lines.push(`## ${emoji} ${capitalizedCategory} News (${totalPoints} total points)`);
   lines.push('');
   items.forEach((item) => {
     lines.push(renderNewsItem(item));
@@ -49,12 +60,23 @@ function renderCategory(category: string, items: NewsItem[]): string {
 
 export function generateMarkdown(news: AggregatedNews): string {
   const lines: string[] = [];
+  const totalPoints = news.items.reduce((sum, item) => sum + item.points, 0);
 
   lines.push(`# Daily News Digest`);
   lines.push('');
   lines.push(`**Generated:** ${formatDate(news.generatedAt)} at ${formatTime(news.generatedAt)}`);
   lines.push('');
   lines.push(`**Total Articles:** ${news.totalCount}`);
+  lines.push(`**Total Points:** ${totalPoints} 🎯`);
+  lines.push('');
+  lines.push('---');
+  lines.push('');
+  lines.push('### Points Legend');
+  lines.push('- 🔥 25+ points: Trending & High Quality');
+  lines.push('- ⭐ 20-24 points: Excellent Quality');
+  lines.push('- ✨ 15-19 points: Very Good');
+  lines.push('- 👍 10-14 points: Good Quality');
+  lines.push('- 📌 <10 points: Standard');
   lines.push('');
   lines.push('---');
   lines.push('');
