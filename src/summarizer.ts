@@ -49,6 +49,7 @@ Guidelines:
 - Focus on what matters to regular people
 - Highlight connections between stories if relevant
 - Key takeaways should be actionable or thought-provoking
+- Return each sentence as a separate sentence for formatting
 
 Return ONLY the JSON, no other text or markdown formatting.`;
 
@@ -85,24 +86,32 @@ Return ONLY the JSON, no other text or markdown formatting.`;
   }
 }
 
+function splitIntoSentences(text: string): string[] {
+  // Split by sentence endings and clean up
+  return text
+    .split(/(?<=[.!?])\s+/)
+    .filter(s => s.trim().length > 0)
+    .map(s => s.trim());
+}
+
 export function formatSummaryMarkdown(summary: NewsSummary): string {
   const lines: string[] = [
     '## 🤖 AI-Powered Summary',
     '',
     '### Overview',
-    summary.overview,
+    ...splitIntoSentences(summary.overview).map(s => `- ${s}`),
     '',
     '### 🌍 World',
-    summary.world,
+    ...splitIntoSentences(summary.world).map(s => `- ${s}`),
     '',
     '### 💹 Finance',
-    summary.finance,
+    ...splitIntoSentences(summary.finance).map(s => `- ${s}`),
     '',
     '### 💻 Tech',
-    summary.tech,
+    ...splitIntoSentences(summary.tech).map(s => `- ${s}`),
     '',
     '### 💰 Venture Capital',
-    summary.vc,
+    ...splitIntoSentences(summary.vc).map(s => `- ${s}`),
     '',
     '### 💡 Key Takeaways',
     ...summary.keyTakeaways.map((t) => `- ${t}`),
